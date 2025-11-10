@@ -1,0 +1,68 @@
+<style>
+  :host {
+    display: block;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+    margin: 0 0 2rem 0;
+    font-size: 2.5rem;
+  }
+
+  .game-section {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .numbers-container {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    min-height: 150px;
+    border: 2px dashed #ddd;
+    text-align: center;
+  }
+
+  app-odd, app-even {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .empty-message {
+    color: #999;
+    font-style: italic;
+  }
+</style>
+
+<div class="container">
+  <h1> Bind It! - Number Game</h1>
+  
+  <div class="game-section">
+    <app-game-control (numberEmitted)="onNumberEmitted($event)"></app-game-control>
+  </div>
+
+  <div class="numbers-container">
+    @if (numbersArray.length === 0) {
+      <p class="empty-message">Click "Start Game" to begin. Numbers will appear here...</p>
+    } @else {
+      @for (number of numbersArray; track $index) {
+        @if (number % 2 === 0) {
+          <app-even [number]="number"></app-even>
+        } @else {
+          <app-odd [number]="number"></app-odd>
+        }
+      }
+    }
+  </div>
+</div>

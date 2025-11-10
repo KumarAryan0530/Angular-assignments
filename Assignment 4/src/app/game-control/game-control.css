@@ -1,0 +1,43 @@
+div {
+  padding: 15px;
+  background-color: #e3f2fd;
+  border-radius: 4px;
+  border: 1px solid #2196f3;
+}
+
+h2 {
+  margin-top: 0;
+  color: #1976d2;
+}
+
+button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #1976d2;
+}
+
+button:active {
+  background-color: #1565c0;
+}
+
+button:first-of-type {
+  background-color: #4caf50;
+}
+
+button:first-of-type:hover {
+  background-color: #45a049;
+}
+
+button:first-of-type:active {
+  background-color: #3d8b40;
+}

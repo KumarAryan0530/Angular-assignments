@@ -1,0 +1,10 @@
+.odd-number {
+  color: white;
+  background-color: #f44336;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+}
